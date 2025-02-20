@@ -1,13 +1,14 @@
-
-import './App.css'
+import "./App.css";
+import Sidebar from "./components/Sidebar";
 
 function App() {
-
   return (
     <>
-    <h2 className='bg-purple-300 text-gray-950'> Spotify Clone</h2>
+    <div className="h-[90%] flex">
+      <Sidebar/>
+    </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
