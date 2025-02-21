@@ -1,13 +1,14 @@
 import { assets } from "../assets/assets"
 import { GrInstallOption } from "react-icons/gr";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+    const navigate = useNavigate();
   return (
     <>
     <div className="flex justify-between items-center font-semibold w-full ">
         <div className="flex items-center gap-2">
-            <img src={assets.arrow_left} alt="Left arrow" className=" w-8 p-2 rounded-2xl cursor-pointer"/>
-            <img src={assets.arrow_right} alt="Right arrow" className=" w-8 p-2 rounded-2xl cursor-pointer"/>
+            <img src={assets.arrow_left} alt="Left arrow" className=" w-8 p-2 rounded-2xl cursor-pointer" onClick={()=>navigate(-1)}/>
+            <img src={assets.arrow_right} alt="Right arrow" className=" w-8 p-2 rounded-2xl cursor-pointer" onClick={()=>navigate(+1)}/>
         </div>
         <div className="flex items-center gap-4">
             <p className="text-gray-300 hover:text-white hover:scale-105 cursor-pointer">Premium</p>
