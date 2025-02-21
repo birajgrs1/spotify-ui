@@ -1,11 +1,12 @@
 import { assets } from "../assets/assets";
 import { FaGlobe } from "react-icons/fa";
-
+import {useNavigate} from "react-router-dom";
 const Sidebar = () => {
+  const navigate = useNavigate()
   return (
     <div className="w-[25%] h-full flex-col p-2 hidden lg:flex">
       <div className="bg-[#121212] h-[15%] rounded flex flex-col justify-around">
-        <div className="flex items-center gap-3 pl-8 cursor-pointer">
+        <div onClick={()=> navigate('/')} className="flex items-center gap-3 pl-8 cursor-pointer">
           <div className="w-[36px] h-[36px] flex items-center justify-center rounded-full hover:bg-[#2b2b2b]">
             <img src={assets.home_icon} alt="Home Icon" className="w-[24px]" />
           </div>
